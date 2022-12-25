@@ -2,6 +2,7 @@ package com.neo.service;
 
 import java.util.List;
 
+import com.neo.dto.LoginDto;
 import com.neo.dto.StaffDto;
 
 public interface StaffService {
@@ -13,5 +14,7 @@ public interface StaffService {
 	List<StaffDto> getAllStaff();
 	
 	void deleteStaff(Long staffId);
+
+	StaffDto getStaffByLogin(LoginDto loginDto);
 
 }

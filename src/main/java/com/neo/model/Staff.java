@@ -1,11 +1,6 @@
 package com.neo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,29 +15,35 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Staff {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long staffId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long staffId;
 
-	@Column(name = "staff_name")
-	private String staffName;
+    @Column(name = "staff_name")
+    private String staffName;
 
-	@Column(name = "staff_contact")
-	private String staffContact;
+    @Column(name = "staff_contact")
+    private String staffContact;
 
-	@Column(name = "staff_aadhar")
-	private String staffAadhar;
+    @Column(name = "staff_aadhaar")
+    private String staffAadhaar;
 
-	@Column(name = "staff_designation")
-	private String staffDesignation;
+    @Column(name = "staff_designation")
+    private String staffDesignation;
 
-	@Column(name = "staff_department")
-	private String staffDepartment;
+    @Column(name = "staff_department")
+    private String staffDepartment;
 
-	@Column(name = "staff_gender")
-	private String staffGender;
+    @Column(name = "staff_gender")
+    private String staffGender;
 
-	@Column(name = "staff_dob")
-	private String staffDOB;
+    @Column(name = "staff_dob")
+    private String staffDOB;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "login_Id")
+    private Login login;
+
+    @Embedded
+    private Address address;
 }

@@ -3,6 +3,7 @@ package com.neo.service;
 import java.util.List;
 
 import com.neo.dto.AdminDto;
+import com.neo.dto.LoginDto;
 
 public interface AdminService {
 
@@ -13,5 +14,7 @@ public interface AdminService {
 	List<AdminDto> getAllAdmin();
 	
 	void deleteAdmin(Long adminId);
+
+	AdminDto getAdminByLogin(LoginDto loginDto);
 
 }

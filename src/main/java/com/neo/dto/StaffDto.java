@@ -26,7 +26,7 @@ public class StaffDto {
 
 	@NotEmpty
 	@Size(min = 12, max = 12, message = "Aadhar-Card must be 12 digit....!!!")
-	private String staffAadhar;
+	private String staffAadhaar;
 
 	@NotEmpty
 	private String staffDesignation;
