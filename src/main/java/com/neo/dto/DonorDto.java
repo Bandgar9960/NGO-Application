@@ -30,7 +30,7 @@ public class DonorDto {
 	@NotEmpty
 	@Size(min = 10, max = 10, message = "PAN-Card must be 10 digit....!!!")
 	@Pattern(regexp = "[A-Z]{5}[0-9]{4}[A-Z]{1}")
-	private String donorPAN;  //ABEDF4578L
+	private String donorPAN;  //  ENTEP7522G     A-Z -5 , 0-9 - 4  , A-Z -1
 
 	@NotEmpty
 	private String donorGender;

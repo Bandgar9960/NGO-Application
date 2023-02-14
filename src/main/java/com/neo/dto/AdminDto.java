@@ -2,6 +2,7 @@ package com.neo.dto;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlType;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,7 +20,8 @@ public class AdminDto {
 	@NotEmpty
 	@Size(min = 3,max = 20, message ="Name must be Atleast 3 character!! ")
 	private String adminName;
-    
+
+
 	@NotEmpty
  	@Size(min=10,max = 10 ,message = "Not Valid ADMIN_CONTACT !!!")
 	private String adminContact;

@@ -40,7 +40,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public AdminDto updateAdmin(AdminDto adminDto, Long adminId) {
 
-        logger.info("Initiating dao call for the update the admin details with :{}", adminId);
+        logger.info("Initiating dao call for the update the admin details with : {}", adminId);
         Admin admin = this.adminRepository.findById(adminId)
                 .orElseThrow(() -> new ResourceNotFoundException(AppConstants.NOT_FOUND + adminId));
 

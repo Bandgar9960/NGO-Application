@@ -33,11 +33,12 @@ public class AdminController {
 
 	Logger logger = LoggerFactory.getLogger(AdminController.class);
 
-	/**
+	/** ********************************************************
 	 * @author Dnyaneshwar
 	 * @apiNote This Api is to save admin data
 	 * @param adminDto
 	 * @return
+	 *  ********************************************************
 	 */
 
 	@PostMapping("/admins")
