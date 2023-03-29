@@ -1,6 +1,6 @@
 package com.neo;
 
-import com.neo.model.Admin;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
